@@ -16,7 +16,7 @@ impl SlackClient {
     pub async fn send_message(&self, destinatary: &SlackDestinatary, message: &str) -> anyhow::Result<SenderResponse> {
         let webhook = destinatary.webhook.clone();
 
-        log::debug!("Sending slack message to webhook {webhook}");
+        log::debug!("Preparing to send slack message to webhook {webhook}");
         let payload = json!({
             "text": message,
         });
