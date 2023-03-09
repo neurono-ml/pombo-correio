@@ -1,1 +1,6 @@
 /target
+docker/flags/
+
+resources/
+requests/
+.vscode/
