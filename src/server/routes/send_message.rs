@@ -39,7 +39,7 @@ pub async fn send_message(hub_: web::Data<NotificationHub>, payload: web::Json<S
         if errors.len() > 0 {
             HttpResponse::InternalServerError().json(responses)
         } else {
-            HttpResponse::InternalServerError().json(responses)
+            HttpResponse::Ok().json(responses)
         };
 
     response
