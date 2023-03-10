@@ -11,7 +11,7 @@ ADD src /application/src
 RUN cargo test
 RUN cargo build --release
 RUN mkdir -p /application/bin
-RUN cp /application/target/release/awin-feed-downloader /application/bin/
+RUN cp /application/target/release/pombo-correio-api /application/bin/
 
 FROM docker.io/debian:buster-slim
 
@@ -21,7 +21,7 @@ ARG VERSION
 LABEL "org.opencontainers.image.source"="https://github.com/neurono-ml/pombo-correio"
 LABEL "org.opencontainers.image.revision"="${GIT_REFERENCE}"
 LABEL "org.opencontainers.image.version"="${VERSION}"
-LABEL "com.driyca.entrypoint"="pombo-correio"
+LABEL "com.driyca.entrypoint"="pombo-correio-api"
 LABEL "com.driyca/healthz"="/health"
 
 ENV RUST_LOG=info
