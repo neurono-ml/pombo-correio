@@ -4,3 +4,5 @@ docker/flags/
 resources/
 requests/
 .vscode/
+
+deployments/
